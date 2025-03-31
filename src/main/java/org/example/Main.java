@@ -26,6 +26,6 @@ public class Main {
     }
 
     public static boolean containsUppercase(String password) {
-        return true;
+        return !password.toLowerCase().equals(password);
     }
 }
