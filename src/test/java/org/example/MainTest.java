@@ -65,4 +65,15 @@ class MainTest {
 
     }
 
+    @Test
+    void containsUppercase_shouldReturnFalse_whenCalledWithPasswordWithoutUpperCaseLetters() {
+        //GIVEN
+        String password = "pass12";
+        //WHEN
+        boolean actual = Main.containsUppercase(password);
+        //THEN
+        assertFalse(actual);
+
+    }
+
 }
