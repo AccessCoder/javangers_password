@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 /**
  *
- * With another method, you want to check if the password contains digits.
  * Additionally, you want to ensure with a method that both uppercase and lowercase letters are used in the password.
  * And a method should detect commonly used passwords.
  */
@@ -54,4 +53,16 @@ class MainTest {
         assertTrue(actual);
 
     }
+
+    @Test
+    void containsUppercase_shouldReturnTrue_whenCalledWithPasswordWithUpperCaseLetters() {
+        //GIVEN
+        String password = "Pass12";
+        //WHEN
+        boolean actual = Main.containsUppercase(password);
+        //THEN
+        assertTrue(actual);
+
+    }
+
 }
