@@ -22,4 +22,15 @@ class MainTest {
         assertTrue(actual);
 
     }
+
+    @Test
+    void checkLength_shouldReturnFalse_whenCalledWithPasswordWith7Characters() {
+        //GIVEN
+        String password = "Pass121";
+        //WHEN
+        boolean actual = Main.checkLength(password);
+        //THEN
+        assertFalse(actual);
+
+    }
 }
