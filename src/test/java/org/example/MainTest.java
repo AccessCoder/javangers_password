@@ -43,4 +43,15 @@ class MainTest {
         assertFalse(actual);
 
     }
+
+    @Test
+    void containsDigit_shouldReturnTrue_whenCalledWithPasswordWithDigits() {
+        //GIVEN
+        String password = "Pass12";
+        //WHEN
+        boolean actual = Main.containsDigit(password);
+        //THEN
+        assertTrue(actual);
+
+    }
 }
