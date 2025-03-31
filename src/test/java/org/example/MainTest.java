@@ -108,4 +108,15 @@ class MainTest {
 
     }
 
+    @Test
+    void containsIllegalPasswords_shouldReturnFalse_whenCalledWithoutIllegalPassword() {
+        //GIVEN
+        String password = "Passwort1337";
+        //WHEN
+        boolean actual = Main.containsIllegalPassword(password);
+        //THEN
+        assertFalse(actual);
+
+    }
+
 }
