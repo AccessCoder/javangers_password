@@ -33,5 +33,6 @@ public class Main {
     }
 
     public static boolean containsIllegalPassword(String password) {
+        return true;
     }
 }
