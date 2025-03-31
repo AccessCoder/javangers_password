@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 /**
  *
- * A method that ensures a password is at least 8 characters long.
  * With another method, you want to check if the password contains digits.
  * Additionally, you want to ensure with a method that both uppercase and lowercase letters are used in the password.
  * And a method should detect commonly used passwords.
@@ -29,6 +28,17 @@ class MainTest {
         String password = "Pass121";
         //WHEN
         boolean actual = Main.checkLength(password);
+        //THEN
+        assertFalse(actual);
+
+    }
+
+    @Test
+    void containsDigit_shouldReturnFalse_whenCalledWithPasswordWithoutDigits() {
+        //GIVEN
+        String password = "Pass";
+        //WHEN
+        boolean actual = Main.containsDigit(password);
         //THEN
         assertFalse(actual);
 
