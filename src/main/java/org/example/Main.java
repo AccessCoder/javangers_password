@@ -24,4 +24,8 @@ public class Main {
         }
         return false;
     }
+
+    public static boolean containsUppercase(String password) {
+        return true;
+    }
 }
