@@ -30,6 +30,6 @@ public class Main {
     }
 
     public static boolean containsLowercase(String password) {
-        return false;
+        return !password.toUpperCase().equals(password);
     }
 }
