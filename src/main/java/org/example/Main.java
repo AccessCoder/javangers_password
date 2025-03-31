@@ -15,6 +15,6 @@ public class Main {
     }
 
     public static boolean checkLength(String password) {
-        return true;
+       return password.length() >= 8;
     }
 }
