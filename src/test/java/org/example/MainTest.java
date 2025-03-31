@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 /**
  *
- * Additionally, you want to ensure with a method that both uppercase and lowercase letters are used in the password.
  * And a method should detect commonly used passwords.
  */
 class MainTest {
@@ -93,6 +92,17 @@ class MainTest {
         String password = "Pass12";
         //WHEN
         boolean actual = Main.containsLowercase(password);
+        //THEN
+        assertTrue(actual);
+
+    }
+
+    @Test
+    void containsIllegalPasswords_shouldReturnTrue_whenCalledWithIllegalPassword() {
+        //GIVEN
+        String password = "Passwort123";
+        //WHEN
+        boolean actual = Main.containsIllegalPassword(password);
         //THEN
         assertTrue(actual);
 

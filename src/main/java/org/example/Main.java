@@ -2,7 +2,6 @@ package org.example;
 
 /**
  *
- * Additionally, you want to ensure with a method that both uppercase and lowercase letters are used in the password.
  * And a method should detect commonly used passwords.
  */
 
@@ -31,5 +30,8 @@ public class Main {
 
     public static boolean containsLowercase(String password) {
         return !password.toUpperCase().equals(password);
+    }
+
+    public static boolean containsIllegalPassword(String password) {
     }
 }
