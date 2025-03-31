@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 /**
  *
- * And a method should detect commonly used passwords.
  */
 class MainTest {
 
@@ -114,6 +113,39 @@ class MainTest {
         String password = "Passwort1337";
         //WHEN
         boolean actual = Main.containsIllegalPassword(password);
+        //THEN
+        assertFalse(actual);
+
+    }
+
+    @Test
+    void checkPassword_shouldReturnFalse_whenCalledWithInvalidPassword() {
+        //GIVEN
+        String password = "password123";
+        //WHEN
+        boolean actual = Main.checkPassword(password);
+        //THEN
+        assertFalse(actual);
+
+    }
+
+    @Test
+    void checkPassword_shouldReturnFalse_whenCalledWithShortPassword() {
+        //GIVEN
+        String password = "pA1";
+        //WHEN
+        boolean actual = Main.checkPassword(password);
+        //THEN
+        assertFalse(actual);
+
+    }
+
+    @Test
+    void checkPassword_shouldReturnFalse_whenCalledWithIllegalPassword() {
+        //GIVEN
+        String password = "Passwort123";
+        //WHEN
+        boolean actual = Main.checkPassword(password);
         //THEN
         assertFalse(actual);
 

@@ -2,13 +2,20 @@ package org.example;
 
 /**
  *
- * And a method should detect commonly used passwords.
  */
 
 public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello world!");
+    }
+
+    public static boolean checkPassword(String password) {
+        return checkLength(password)
+                && containsDigit(password)
+                && containsUppercase(password)
+                && containsLowercase(password)
+                && !containsIllegalPassword(password);
     }
 
     public static boolean checkLength(String password) {
@@ -42,4 +49,6 @@ public class Main {
         }
         return false;
     }
+
+
 }
