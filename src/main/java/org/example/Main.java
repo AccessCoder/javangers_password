@@ -28,4 +28,8 @@ public class Main {
     public static boolean containsUppercase(String password) {
         return !password.toLowerCase().equals(password);
     }
+
+    public static boolean containsLowercase(String password) {
+        return false;
+    }
 }

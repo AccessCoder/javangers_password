@@ -76,4 +76,15 @@ class MainTest {
 
     }
 
+    @Test
+    void containsLowercase_shouldReturnFalse_whenCalledWithPasswordWithoutLowerCaseLetters() {
+        //GIVEN
+        String password = "PASS12";
+        //WHEN
+        boolean actual = Main.containsLowercase(password);
+        //THEN
+        assertFalse(actual);
+
+    }
+
 }
