@@ -32,7 +32,14 @@ public class Main {
         return !password.toUpperCase().equals(password);
     }
 
+    public static String[] forbiddenPasswords = {"Passwort123", "000Password", "BestDayEver35"};
+
     public static boolean containsIllegalPassword(String password) {
-        return true;
+        for (String x : forbiddenPasswords){
+            if (x.equals(password)){
+                return true;
+            }
+        }
+        return false;
     }
 }
